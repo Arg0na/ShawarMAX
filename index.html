@@ -18,16 +18,16 @@
       --dark3:  #3D1A00;
       --text:   #1A0A00;
     }
-
+ 
     * { margin:0; padding:0; box-sizing:border-box; }
-
+ 
     body {
       background: var(--cream);
       color: var(--text);
       font-family: 'Nunito', sans-serif;
       overflow-x: hidden;
     }
-
+ 
     /* ── Grain texture overlay ── */
     body::before {
       content:'';
@@ -36,7 +36,7 @@
       opacity:.04;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
-
+ 
     /* ── Animations ── */
     @keyframes fadeUp   { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
     @keyframes fadeIn   { from{opacity:0} to{opacity:1} }
@@ -44,12 +44,12 @@
     @keyframes pulse-r  { 0%,100%{box-shadow:0 0 0 0 rgba(232,50,26,.45)} 50%{box-shadow:0 0 0 14px rgba(232,50,26,0)} }
     @keyframes marquee  { from{transform:translateX(0)} to{transform:translateX(-50%)} }
     @keyframes float    { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
-
+ 
     .fade-up  { animation: fadeUp  .8s ease both; }
     .fade-up2 { animation: fadeUp  .8s ease .15s both; }
     .fade-up3 { animation: fadeUp  .8s ease .3s  both; }
     .fade-up4 { animation: fadeUp  .8s ease .45s both; }
-
+ 
     /* ── Header ── */
     .header {
       position: fixed; top:0; left:0; right:0; z-index:100;
@@ -57,7 +57,7 @@
       backdrop-filter: blur(10px);
       border-bottom: 2px solid var(--orange);
     }
-
+ 
     /* ── Buttons ── */
     .btn-fire {
       background: linear-gradient(135deg, var(--red), var(--orange));
@@ -76,7 +76,7 @@
     }
     .btn-fire:hover::after { left:100%; }
     .btn-fire:hover { transform:translateY(-3px); box-shadow:0 10px 30px rgba(232,50,26,.5); }
-
+ 
     .btn-outline {
       border: 2px solid var(--orange);
       color: var(--orange);
@@ -86,23 +86,23 @@
       background: transparent;
     }
     .btn-outline:hover { background:var(--orange); color:#fff; transform:translateY(-3px); box-shadow:0 10px 25px rgba(255,107,26,.4); }
-
+ 
     .viber-btn { background:linear-gradient(135deg,#7360f2,#9b6ef3); transition:all .3s; }
     .viber-btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(115,96,242,.45); }
     .tg-btn { background:linear-gradient(135deg,#0088cc,#00aaea); transition:all .3s; }
     .tg-btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,136,204,.4); }
-
+ 
     /* ── Hero ── */
     .hero {
       min-height: 100vh;
       background:
         linear-gradient(160deg, rgba(26,10,0,.75) 0%, rgba(45,18,0,.5) 50%, rgba(26,10,0,.85) 100%),
-        url('https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat;
+        url('https://i.ibb.co/wNYbgW0w/wmremove-transformed-1.png') center/cover no-repeat;
       display:flex; align-items:center; justify-content:center;
       text-align:center;
       padding-top: 72px;
     }
-
+ 
     .hero-badge {
       display:inline-flex; align-items:center; gap:6px;
       background: rgba(255,184,0,.15);
@@ -112,7 +112,7 @@
       letter-spacing:.2em; text-transform:uppercase;
       padding:6px 16px; border-radius:999px;
     }
-
+ 
     h1 {
       font-family:'Unbounded',sans-serif;
       font-size: clamp(2.4rem, 9vw, 5.5rem);
@@ -120,13 +120,13 @@
       line-height:1.05;
       color:#fff;
     }
-
+ 
     .fire-word {
       background: linear-gradient(90deg, var(--yellow), var(--orange), var(--red));
       -webkit-background-clip:text; -webkit-text-fill-color:transparent;
       background-clip:text;
     }
-
+ 
     /* ── Marquee ── */
     .marquee-wrap {
       background: linear-gradient(90deg, var(--red), var(--orange));
@@ -144,7 +144,7 @@
       text-transform:uppercase;
       padding:0 28px;
     }
-
+ 
     /* ── Menu cards ── */
     .menu-card {
       background:#fff;
@@ -164,7 +164,7 @@
       width:100%; height:200px; object-fit:cover;
       transition: transform .5s;
     }
-
+ 
     /* ── Why us ── */
     .why-card {
       background:#fff;
@@ -177,7 +177,7 @@
       transform:translateY(-4px);
       box-shadow:0 12px 30px rgba(232,50,26,.12);
     }
-
+ 
     /* ── Floating CTA ── */
     .floating-cta {
       position:fixed; bottom:20px; left:50%;
@@ -189,7 +189,7 @@
     .floating-cta.btn-fire:hover {
       transform: translateX(-50%) translateY(-3px);
     }
-
+ 
     /* ── Section titles ── */
     .section-tag {
       font-size:11px; font-weight:700;
@@ -207,30 +207,30 @@
       border-radius:99px;
       margin:0 auto;
     }
-
+ 
     /* ── Footer ── */
     footer {
       background: var(--dark);
       border-top: 3px solid var(--orange);
     }
-
+ 
     @media(max-width:640px) {
       .hero { background-position:65% center; }
     }
   </style>
 </head>
 <body>
-
+ 
 <!-- ═══ HEADER ═══ -->
 <header class="header px-4 py-0">
   <div class="max-w-5xl mx-auto flex items-center justify-between">
     <div class="flex items-center gap-0">
-      <img src="https://i.ibb.co/PzMRWCZ6/Gemini-Generated-Image-ta6jofta6jofta6j-removebg-preview.png" alt="ShawarMAX" style="height:180px;width:180px;object-fit:contain;object-position:center;margin:-40px;filter:drop-shadow(0 0 10px rgba(255,107,26,0.8))"/>
+      <img src="https://i.ibb.co/PzMRWCZ6/Gemini-Generated-Image-ta6jofta6jofta6j-removebg-preview.png" alt="ShawarMAX" style="height:80px;width:80px;object-fit:contain;object-position:center;margin:-20px;filter:drop-shadow(0 0 10px rgba(255,107,26,0.8))"/>
       <div>
         <div class="font-black text-white leading-none" style="font-family:'Rajdhani',sans-serif; font-size:1.3rem; letter-spacing:0.02em;">
           Shawar<span style="color:var(--orange);font-style:italic;">MAX</span>
         </div>
-        <div class="text-xs tracking-widest uppercase" style="color:rgba(255,107,26,.7)">Одеса · Люстдорфська 88В</div>
+        <div class="text-xs tracking-widest uppercase" style="color:rgba(255,107,26,.7);white-space:nowrap;">Люстдорфська 88В</div>
       </div>
     </div>
     <div class="flex gap-2">
@@ -247,7 +247,7 @@
     </div>
   </div>
 </header>
-
+ 
 <!-- ═══ HERO ═══ -->
 <section class="hero px-4">
   <div class="max-w-3xl mx-auto pb-10">
@@ -256,15 +256,15 @@
       <span class="fire-word">Соковита.</span><br/>
       Одеська.
     </h1>
-
+ 
     <div class="flex justify-center gap-3 mb-4 fade-up2">
       <span style="background:rgba(0,160,0,0.2);border:1px solid #00c800;color:#7fff7f;font-size:11px;font-weight:700;letter-spacing:.15em;padding:5px 14px;border-radius:999px;text-transform:uppercase;">✅ 100% Halal</span>
     </div>
     <p class="fade-up3 text-gray-200 text-base sm:text-lg font-medium mb-8 leading-relaxed max-w-xl mx-auto">
-      Готуємо з любов'ю щодня з <strong style="color:var(--yellow)">8:00 до 23:00</strong>.<br/>
+      Готуємо з любов'ю щодня з <strong style="color:var(--yellow)">10:00 до 23:00</strong>.<br/>
       Тільки свіже м'ясо, домашні соуси, свіжа лаваш.
     </p>
-
+ 
     <div class="fade-up4 flex flex-col sm:flex-row gap-3 justify-center">
       <a href="tel:+380XXXXXXXXX"
          class="btn-fire flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-sm uppercase">
@@ -277,7 +277,7 @@
         Написати у Viber
       </a>
     </div>
-
+ 
     <!-- Trust row -->
     <div class="fade-up4 flex flex-wrap justify-center gap-5 mt-8 text-xs text-gray-300">
       <div class="flex items-center gap-1.5">
@@ -286,7 +286,7 @@
       </div>
       <div class="flex items-center gap-1.5">
         <i data-lucide="clock" class="w-4 h-4" style="color:var(--yellow)"></i>
-        8:00 — 23:00 щодня
+        10:00 — 23:00 щодня
       </div>
       <div class="flex items-center gap-1.5">
         <i data-lucide="truck" class="w-4 h-4" style="color:var(--yellow)"></i>
@@ -295,7 +295,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ MARQUEE ═══ -->
 <div class="marquee-wrap">
   <div class="marquee-track">
@@ -313,7 +313,7 @@
     <span>⚡ Готово за 5 хвилин</span>
   </div>
 </div>
-
+ 
 <!-- ═══ MENU ═══ -->
 <section class="py-20 px-4" style="background:var(--cream);">
   <div class="max-w-5xl mx-auto">
@@ -323,9 +323,9 @@
       <h2 class="section-title text-3xl sm:text-4xl">Обери своє <span style="color:var(--red)">улюблене</span></h2>
       <p class="text-gray-500 mt-2 text-sm">Готуємо при тобі — бачиш кожен інгредієнт</p>
     </div>
-
+ 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-
+ 
       <!-- Item 1 -->
       <div class="menu-card">
         <div class="overflow-hidden">
@@ -345,7 +345,7 @@
           </a>
         </div>
       </div>
-
+ 
       <!-- Item 2 -->
       <div class="menu-card" style="border-color:var(--orange);">
         <div class="overflow-hidden relative">
@@ -367,7 +367,7 @@
           </a>
         </div>
       </div>
-
+ 
       <!-- Item 3 -->
       <div class="menu-card">
         <div class="overflow-hidden">
@@ -387,11 +387,11 @@
           </a>
         </div>
       </div>
-
+ 
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ WHY US ═══ -->
 <section class="py-16 px-4" style="background:#fff;">
   <div class="max-w-4xl mx-auto">
@@ -400,7 +400,7 @@
       <div class="divider mb-4"></div>
       <h2 class="section-title text-2xl sm:text-3xl">Ми не просто <span style="color:var(--red)">шаурма</span></h2>
     </div>
-
+ 
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
       <div class="why-card p-5 text-center">
         <div class="text-3xl mb-2">🥩</div>
@@ -425,7 +425,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ═══ CTA BANNER ═══ -->
 <section class="py-14 px-4 text-center" style="background:linear-gradient(135deg,var(--dark),var(--dark2));">
   <p class="section-tag mb-3" style="color:var(--yellow)">Замов прямо зараз</p>
@@ -451,7 +451,7 @@
     </a>
   </div>
 </section>
-
+ 
 <!-- ═══ FOOTER ═══ -->
 <footer class="py-10 px-4 pb-24">
   <div class="max-w-4xl mx-auto text-center">
@@ -462,7 +462,7 @@
       </div>
     </div>
     <p class="text-xs tracking-widest uppercase mb-6" style="color:rgba(255,107,26,.6)">Одеса · Люстдорфська 88В</p>
-
+ 
     <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-6">
       <div class="flex items-center gap-1.5">
         <i data-lucide="map-pin" class="w-4 h-4" style="color:var(--orange)"></i>
@@ -470,28 +470,28 @@
       </div>
       <div class="flex items-center gap-1.5">
         <i data-lucide="clock" class="w-4 h-4" style="color:var(--orange)"></i>
-        Щодня 8:00 — 23:00
+        Щодня 10:00 — 23:00
       </div>
       <div class="flex items-center gap-1.5">
         <i data-lucide="phone" class="w-4 h-4" style="color:var(--orange)"></i>
         +38 (0XX) XXX-XX-XX
       </div>
     </div>
-
+ 
     <p class="text-gray-600 text-xs">© 2025 ShawarMAX. Одеса, Україна.</p>
   </div>
 </footer>
-
+ 
 <!-- ═══ FLOATING CTA ═══ -->
 <a href="tel:+380XXXXXXXXX"
    class="floating-cta btn-fire flex items-center gap-2 px-7 py-4 rounded-2xl font-black text-sm uppercase shadow-2xl">
   <i data-lucide="phone-call" class="w-5 h-5"></i>
   Замовити зараз
 </a>
-
+ 
 <script>
   lucide.createIcons();
-
+ 
   // Scroll reveal
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -501,7 +501,7 @@
       }
     });
   }, { threshold: 0.1 });
-
+ 
   document.querySelectorAll('.menu-card, .why-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(28px)';
@@ -511,3 +511,4 @@
 </script>
 </body>
 </html>
+ 
